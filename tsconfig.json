@@ -7,13 +7,40 @@
     "moduleResolution": "node",
     // Enable JSON imports.
     "resolveJsonModule": true,
+
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+
+    "declaration": true,
+
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "jsx": "react-jsx",
     // Enable stricter transpilation for better output.
     "isolatedModules": true,
-    // Astro will directly run your TypeScript code, no transpilation needed.
-    "noEmit": true,
-    // Enable strict type checking.
-    "strict": true,
-    // Error when a value import is only used as a type.
-    "importsNotUsedAsValues": "error"
-  }
+    // Add type definitions for our Vite runtime.
+    "types": ["vite/client"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"]
 }
